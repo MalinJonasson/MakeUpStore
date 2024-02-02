@@ -8,7 +8,7 @@ namespace OnlineMakeUpStore
 {
     public partial class AdminLogIn : Form
     {
-        public DatabaseConnection Connection = new("localhost", "OnlineMakeUpStore", "root", "Mems91939501!");
+        public DatabaseConnection Connection = new("localhost", "OnlineMakeUpStore", "", "");
         public HomePage HomePage;
         public Manager Manager { get; set; }
         public Skincare Skincare;
@@ -240,7 +240,6 @@ namespace OnlineMakeUpStore
         {
             var userCartViews = Connection.GetUsersWithCartProducts();
             usersAndCartListBox.Items.Clear();
-            // Loopa igenom resultaten och lägg till varje objekt i ListBox
             foreach (var product in userCartViews)
             {
                 usersAndCartListBox.Items.Add($"UserId: {product.Value.UserId} UserName: {product.Value.UserName} CartId: {product.Value.CartId} ProductName: {product.Value.ProductName}");
