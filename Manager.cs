@@ -5,7 +5,7 @@ namespace OnlineMakeUpStore
 {
     public class Manager
     {
-        public DatabaseConnection Connection = new("localhost", "OnlineMakeUpStore", "root", "Mems91939501!");
+        public DatabaseConnection Connection = new("localhost", "OnlineMakeUpStore", "", "");
         public User User;
         public string AdminName = "admin";
         public string AdminPassword = "admin";

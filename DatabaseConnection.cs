@@ -12,8 +12,8 @@ namespace OnlineMakeUpStore
     {
         string server = "localhost"; 
         string database = "OnlineMakeUpStore"; 
-        string username = "root"; 
-        string password = "Mems91939501!"; 
+        string username = ""; 
+        string password = ""; 
 
         string connectionString = "";
 
@@ -435,9 +435,6 @@ namespace OnlineMakeUpStore
                         };
                         key++;
                         userCartViews.Add(key, userCartView);
-
-                        // Skapa en sträng som representerar raden och skicka den som parameter
-                        // string userInfo = $"User ID: {userId}, User Name: {userName}, Cart ID: {cartId}, Product ID: {productId}, Product Name: {productName}, Category: {productCategory}, Price: {productPrice}";
 
                     }
                 }

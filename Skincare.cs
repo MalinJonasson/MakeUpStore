@@ -3,7 +3,7 @@ namespace OnlineMakeUpStore
 {
     public partial class Skincare : UserControl
     {
-        public DatabaseConnection Connection = new("localhost", "OnlineMakeUpStore", "root", "Mems91939501!");
+        public DatabaseConnection Connection = new("localhost", "OnlineMakeUpStore", "", "");
         public Manager Manager { get; set; }
         public HomePage HomePage { get; set; }
         public AdminLogIn AdminLogIn;
@@ -68,7 +68,6 @@ namespace OnlineMakeUpStore
                 {
                     if (Manager.CurrentUser != null)
                     {
-                        //Manager.CurrentUser.MyCart.productsInCart[selectedProduct.Id] = selectedProduct;
                         Connection.AddProductToCart(Manager.CurrentUser.MyCart.Id, selectedProduct.Id);
                         Manager.CurrentUser.MyCart.productsInCart.Add(selectedProduct.Id, selectedProduct);
                     }

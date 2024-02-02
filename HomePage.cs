@@ -2,7 +2,7 @@ namespace OnlineMakeUpStore
 {
     public partial class HomePage : Form
     {
-        public DatabaseConnection Connection = new("localhost", "OnlineMakeUpStore", "root", "Mems91939501!");
+        public DatabaseConnection Connection = new("localhost", "OnlineMakeUpStore", "", "");
         public Dictionary<int, Product> products { get; set; }
         public Manager Manager = new();
         public CheckOut CheckOut = new();

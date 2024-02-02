@@ -4,7 +4,7 @@ namespace OnlineMakeUpStore
 {
     public partial class Haircare : UserControl
     {
-        public DatabaseConnection Connection = new("localhost", "OnlineMakeUpStore", "root", "Mems91939501!");
+        public DatabaseConnection Connection = new("localhost", "OnlineMakeUpStore", "", "");
         public Manager Manager;
         public HomePage HomePage;
         public CheckOut CheckOut;
@@ -67,7 +67,6 @@ namespace OnlineMakeUpStore
                 {
                     if (Manager.CurrentUser != null)
                     {
-                        //Manager.CurrentUser.MyCart.productsInCart[selectedProduct.Id] = selectedProduct;
                         Connection.AddProductToCart(Manager.CurrentUser.MyCart.Id, selectedProduct.Id);
                         Manager.CurrentUser.MyCart.productsInCart.Add(selectedProduct.Id, selectedProduct);
                     }

@@ -5,7 +5,7 @@ namespace OnlineMakeUpStore
     public partial class UserLogIn : Form
     {
 
-        public DatabaseConnection Connection = new("localhost", "OnlineMakeUpStore", "root", "Mems91939501!");
+        public DatabaseConnection Connection = new("localhost", "OnlineMakeUpStore", "", "");
         public Dictionary<int, User> Customers { get; set; }
         public HomePage HomePage { get; set; }
         public Manager Manager { get; set; }
@@ -32,8 +32,6 @@ namespace OnlineMakeUpStore
            {
                 if (userName == user.UserName && password == user.Password)
                 {
-                    // Anropa LogInUser för att hantera inloggningen och kundvagnen
-                    //Manager.LogInUser(user.Id);
                     
                     Manager.CurrentUser = user;
                     Manager.CurrentUser.MyCart = Connection.GetCart(Manager.CurrentUser.Id);
